@@ -8,7 +8,7 @@ const TopMovies = ({topMovies}) => {
     <div className='grid grid-cols-4 gap-4 relative '>
         {topMovies?.map((movie)=>(
            
-            <div className="movieCardWrapper overflow-hidden   group relative w-full rounded-lg ">
+            <div key={movie.imdbID} className="movieCardWrapper overflow-hidden   group relative w-full rounded-lg ">
                 <Image
                     src={movie.Poster}
                     alt={movie.Title}
