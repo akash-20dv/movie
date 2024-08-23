@@ -17,7 +17,7 @@ const Page = async ({params}) => {
   return (
     <div>
        <div className="container mx-auto px-4 py-8">
-      <Link href="/search_result" className="text-blue-500 hover:underline mb-4 inline-block">
+      <Link href="/" className="text-blue-500 hover:underline mb-4 inline-block">
         &larr; Back 
       </Link>
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">

@@ -40,18 +40,13 @@ const NavigationMenu = () => {
     replace(`${pathname}?${searchParams.toString()}`)
     console.log(search)
   }
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      router.push(`/search_result?query=${encodeURIComponent(search)}`);
-    }
-  
-  }
+
   const debounced = debounce(handleChange,400)
   return (<>
     <div className='flex items-center justify-between px-4 py-2 z-[9999] relative bg-gray-400/35 backdrop-blur-2xl'>
         <h2>Logo</h2>
         <div className='focus-within:grow relative mx-4 group flex rounded-full transition-all'>
-          <input onChange={debounced} onKeyDown={handleKeyDown} className='shadow-inner group-focus-within:outline-none w-full px-4 py-2 rounded-full bg-white' placeholder='search here'/>
+          <input onChange={debounced}  className='shadow-inner group-focus-within:outline-none w-full px-4 py-2 rounded-full bg-white' placeholder='search here'/>
         {
           searchedItems.length ?
         (  <ul className='max-w-[900px] absolute top-full border-2 w-full  shadow-md md:h-[40vh] overflow-y-auto p-2 bg-gray-50'>
