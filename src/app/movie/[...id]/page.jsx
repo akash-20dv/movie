@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -12,7 +11,7 @@ const getMovieData= async(id)=>{
    }
    return res.json()
 }
-const DetaledPage = async ({params}) => {
+const Page = async ({params}) => {
     const movie = await getMovieData(params.id)    
    
   return (
@@ -63,4 +62,4 @@ const DetaledPage = async ({params}) => {
   )
 }
 
-export default DetaledPage
+export default Page

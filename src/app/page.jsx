@@ -1,9 +1,8 @@
 'use client'
 import NavigationMenu from "@/components/nav";
 import TopMovies from "@/components/TopMovies";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-export default function Home() {
+export default function Page() {
   const [topMovies , setTopMovies] = useState([])
   const ids = ['tt0111161', 'tt0068646','tt0468569','tt0108052','tt0167260','tt0050083','tt0071562']
   useEffect(()=>{

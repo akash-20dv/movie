@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import React, {  useEffect, useState } from 'react'
 
-export default function page(){
+export default function Page(){
     const [results,setResults] = useState([])
     const searchParams = useSearchParams()
     const search = searchParams.get('query')
