@@ -7,7 +7,10 @@ const nextConfig = {
             hostname:'m.media-amazon.com'
         }
       ]
-    }
+    },
+    experimental: {
+      missingSuspenseWithCSRBailout: false,
+    },
 };
 
 export default nextConfig;
