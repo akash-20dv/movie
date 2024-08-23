@@ -8,13 +8,13 @@ export default function Page(){
     const searchParams = useSearchParams()
     const search = searchParams.get('query')
     useEffect(()=>{
-        const getSearchResults = async()=>{
+        const getsearch_results = async()=>{
             const res = await fetch(`https://www.omdbapi.com/?s=${search}&apikey=81304975`)
                 const data = await res.json()
                 setResults(data.Search)
                 // console.log(data)
         }
-        getSearchResults()
+        getsearch_results()
     },[])
     return <>
     <p>Search results for : <b>{search}</b></p>
